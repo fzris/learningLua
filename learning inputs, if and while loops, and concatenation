@@ -1,0 +1,18 @@
+validAnswer = false
+print("whats your name?")
+local name = io.read();
+while (validAnswer == false)
+do
+    print("hi "..name..", was your day good or bad?")
+    local status = io.read();
+    if status == "bad" then
+        print("its okay "..name..", your day will get better!")
+        validAnswer = true
+    elseif status == "good" then
+        validAnswer = true
+        print("good to hear "..name.."! lets make sure it stays that way!")
+    else
+        print("you didnt answer the question correctly!")
+        validAnswer = false
+    end
+end
